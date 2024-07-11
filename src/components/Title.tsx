@@ -12,7 +12,7 @@ const Layout = styled("div", {
 const TitleWrapper = styled("div", {
   position: "absolute",
   width: "100%",
-  top: "20%",
+  top: "91%",
   left: "50%",
   transform: "translate(-50%, -50%)",
   textAlign: "center",
@@ -21,9 +21,34 @@ const TitleWrapper = styled("div", {
   "-moz-animation": "fadein 3s" /* Firefox */,
   "-webkit-animation": "fadein 3s" /* Safari and Chrome */,
   "-o-animation": "fadein 3s" /* Opera */,
+  backgroundColor: "rgba(254, 254, 254, 0.5)",
 });
 
-const VideoBackground = styled("video", {
+// const VideoBackground = styled("video", {
+//   backgroundColor: "#aeb8b3 !important",
+//   opacity: 0.9,
+//   objectFit: "cover",
+//   objectPosition: "center center",
+//   width: "100%",
+//   height: "100%",
+//   minHeight: 480,
+// });
+
+const ImageWrapper = styled("div", {
+  backgroundColor: "#aeb8b3 !important",
+  opacity: 0.9,
+  objectFit: "cover",
+  objectPosition: "center center",
+  width: "100%",
+  height: "100%",
+  minHeight: 480,
+  display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+});
+
+const ImageComponent = styled("img", {
+    objectFit: "contain",
   backgroundColor: "#aeb8b3 !important",
   opacity: 0.9,
   objectFit: "cover",
@@ -59,9 +84,12 @@ type TitleProps = {
 export default function Title({ data }: TitleProps) {
   return (
     <Layout>
-      <VideoBackground autoPlay loop muted playsInline={true}>
-        <source src="./assets/BackgroundVideo.mp4" type="video/mp4" />
-      </VideoBackground>
+{/*       <VideoBackground autoPlay loop muted playsInline={true}> */}
+{/*         <source src="./assets/BackgroundVideo.mp4" type="video/mp4" /> */}
+{/*       </VideoBackground> */}
+      <ImageWrapper>
+            <ImageComponent src="./assets/Gallery_Photo_7.jpg" alt="Description of image" />
+      </ImageWrapper>
       <TitleWrapper>
         <WeddingInvitation>WEDDING INVITATION</WeddingInvitation>
         <GroomBride>
